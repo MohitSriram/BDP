@@ -10,8 +10,8 @@ object MergeSort {
     //Context about the spark
     val conf = new SparkConf().setAppName("MergeSort").setMaster("local");
     val sc = new SparkContext(conf);
-    val arr = Array(5,71,2,667,325,50);
-    val brr = sc.parallelize(Array(5,71,2,667,325,50));
+    val arr = Array(10,81,,5,700,455,55);
+    val brr = sc.parallelize(Array(10,81,,5,700,455,55));
     val arraymap = brr.map(x => (x, 1))
     val sort = arraymap.sortByKey();
 
